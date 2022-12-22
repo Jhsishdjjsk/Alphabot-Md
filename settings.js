@@ -1,49 +1,50 @@
 const fs = require('fs')
 const chalk = require('chalk')
-const  { indonesia, english, spanyol} = require(`./language`)
+const  { indonesia, english, arabic} = require(`./language`)
 
 // Website Api (jgn di ganti tomlol)
 global.APIs = {
-	alfa: 'https://alphabot-api.herokuapp.com', //apabila link api eror, segera laporkan ke owner
+	alfa: 'https://api.zeeoneofc.xyz', //apabila link api eror, segera laporkan ke owner
 }
 
 // Free apikey (Apikey expired silahkan login terus ganti V12 dgn apikey lu)
 global.APIKeys = {
-	'https://alphabot-api.herokuapp.com': 'V12',  // 👉 login https://api.zeeoneofc.xyz to get apikey || https://api-alphabot.herokuapp.com
+	'https://api.zeeoneofc.xyz': 'V12',  // 👉 login https://api.zeeoneofc.xyz to get apikey
 }
 
 // setting 
 global.autoread = false // auto read message
-global.autobio = true 
+global.autobio = false //auto ganti bio
+global.anticall = true //anti call 
 global.userRegister = false 
 global.autoblok212 = false //ubah jadi true biar nmr 212 di blok sama bot
 
 //language
-//Available in indonesia , english & spanyol 
+//Available in indonesia , english & arabic 
 //You can request others language 
-global.language = indonesia  //change indonesia to english if you don't understand the language used by the bot
+global.language = indonesia  //change arabic to english if you don't understand the language used by the bot
 
 
 // Other
 // Other
-global.botname = "NeasTooMd" //namabot kalian
-global.ownername= "LinuxBotz" //nama kalian
+global.botname = "ELGAZAR-BOT♥✨" //namabot kalian
+global.ownername= "ELGAZAR-ALWAZER♥✨" //nama kalian
 global.myweb ="https://api.zeeoneofc.xyz" //bebas asal jan hapus
-global.youtube = "https://youtube.com/c/YUSUP909" //bebas asal jan hapus
-global.myweb2 = "https://saweria.com/YUSUP909" //bebas
-global.email = "yusup90990@gmail.com" //bebas
+global.youtube = "https://youtube.com/@ABDALLAH_MOHAMED" //bebas asal jan hapus
+global.myweb2 = "https://linktr.ee/zeeoneofc" //bebas
+global.email = "elgazar@gmail.com" //bebas
 global.region = "Indonesia" //bebas
 global.timezone = 'Asia/Jakarta' //  timezone wib
-global.premium = ['621'] //premium user
-global.owner = ["6283897390164"] //ganti agar fitur owner bisa di gunakan
-global.ownernomer = "6283897390164" // nomor wa kalian
-global.ownernomerr = "+6283897390164" //nmr wa kalian
+global.premium = ['201098906252'] //premium user
+global.owner = ["201098906252","201098906252"] //ganti agar fitur owner bisa di gunakan
+global.ownernomer = "201098906252" // nomor wa kalian
+global.ownernomerr = "+201098906252" //nmr wa kalian
 global.thumbnail = "./image/lol.jpg" // ini lol.jpg adalah nama foto di folder image. untuk foto bot
 global.donasi = "./image/donasi.jpg" // foto donasi di folder image
 global.background_welcome="https://telegra.ph/file/90a931648de597820bc08.jpg" // maks size 30kb, agar welcome image nya tdk delay
 global.thumbGif = 'https://telegra.ph/file/e90bef3779d3c5812a5d1.mp4'
-global.packname = '©LinuxMd' //sticker wm ubah
-global.author = 'Di Buat Oleh ffmpeg' //sticker wm ganti nama kalian
+global.packname = '⍣الجزار الوزير يروحي⍣' //sticker wm ubah
+global.author = '⍣01098906252⍣' //sticker wm ganti nama kalian
 global.sessionName = 'session'
 global.typemenu = 'document'
 global.multiplier = 69
@@ -117,16 +118,16 @@ global.flasmurf = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutp
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
-    sukses: '🤗Done, Oke Desu~',
-    admin: 'Perintah Ini Hanya Bisa Digunakan Oleh Admin !',
-    botAdmin: 'Perintah Ini Hanya Bisa Digunakan Ketika Bot Menjadi Admin !',
-    owner: 'Perintah Ini Hanya Bisa Digunakan Oleh Owner !',
-    group: 'Perintah Ini Hanya Bisa Digunakan Di Group !',
-    private: 'Perintah Ini Hanya Bisa Digunakan Di Private !',
-	bot: 'Fitur Khusus Pengguna Nomor Bot',
-    errtoimg: 'Maaf Saat Ini Belum Support Sticker Gif !',
-    wait: '⏳ Sedang Di Proses',
-	lockCmd: 'Fitur Tidak Diaktifkan Oleh Owner!',
+    sukses: '🤗تم~',
+    admin: 'لا يمكن استخدام هذا الأمر إلا من قبل المشرفين!',
+    botAdmin: 'ارفع البوت مشرف لاستخدام الامر!',
+    owner: 'هذا الامر للمطور فقط !',
+    group: 'هذا الامر للجروبات فقط!',
+    private: 'هذا الامر يستخدم في الخاص فقط !',
+	bot: 'ميزات خاصه لمستخدمي البوت',
+    errtoimg: 'عذرًا ، لا يدعم حاليًا ملصق Gif!',
+    wait: '⏳ انتظر شوي يا ورع',
+	lockCmd: 'الميزات التي لم يتم تفعيلها من قبل المطور!',
 	example1: 'Selamat Datang @user Di Group @subject Jangan Lupa Baca Rules @desc\n\nNote :\n1. @user (Mention User Join)\n2. @bio (Get Bio User Join)\n3. @tanggal (Date Now)\n4. @desc (Get Description Group)\n5. @subject (Group Name)'
 }
 
