@@ -10,14 +10,14 @@ exports.delstik = (a, b) =>{
 	return`Lista ${a} con clave ${b} no existe en la base de datos`
 	}
 exports.profile = (username, m, about, pasangan, PhoneNumber, exp, min, xp, math, prefix, level, role, limit, registered, tanggal__, regTime,premium, msToDate , premiumDate, now, lastclaim) =>{
-	return`📛 Nombre: ${username} (@${m.sender.split`@`[0]})${about ? '\n💌 Bio: ' + about : ''}
-👨‍❤️‍👨 Estado: ${pasangan ? `Berpacaran @${pasangan.split`@`[0]}` : '-' }
-#️⃣ Número: ${PhoneNumber('+' + m.sender.replace('@s.whatsapp.net', '')).getNumber('international')}
-🔗 Enlace: https://wa.me/${m.sender.split`@`[0]}
-🤷‍♂️ XP: Total ${exp} (${exp - min} / ${xp}) [ ${math <= 0 ? `Ready to *${prefix}levelup*` : `${math} XP left to levelup`} ]
-🎚️ Nivel: ${level}
+	return`📛 الاسم: ${username} (@${m.sender.split`@`[0]})${about ? '\n💌 Bio: ' + about : ''}
+👨‍❤️‍👨 الحاله: ${pasangan ? `Berpacaran @${pasangan.split`@`[0]}` : '-' }
+#️⃣ الرقم: ${PhoneNumber('+' + m.sender.replace('@s.whatsapp.net', '')).getNumber('international')}
+🔗 لينك: https://wa.me/${m.sender.split`@`[0]}
+🤷‍♂️ اكس بي: Total ${exp} (${exp - min} / ${xp}) [ ${math <= 0 ? `Ready to *${prefix}levelup*` : `${math} XP left to levelup`} ]
+🎚️ لفل: ${level}
 🎢 Role: ${role}
-📊 Límite: ${limit}
+📊 الحد: ${limit}
 ®️ Registered: ${registered ? '✅ (' + tanggal__(regTime) + ')': '❌'}
 ⛽ De primera calidad: ${premium ? `✅\n⏰ Prima vencida : msToDate(premiumDate - now)` : '❌'}
 🛄 Last claim: ${lastclaim > 0 ? + tanggal__(lastclaim) : ''}`
